@@ -1,0 +1,53 @@
+.services {
+    &__inner {
+        display: flex;
+        padding: 100px 0 100px 35px;
+    }
+
+    &__title {
+        max-width: 280px;
+        width: 100%;
+        margin: 5px 130px 0 0;
+        text-align: right;
+        font-size: 28px;
+        line-height: 1.3;
+        font-weight: 700;
+    }
+
+    &__list {
+        display: grid;
+        grid-template-columns: repeat(2, 355px);
+        column-gap: 100px;
+        row-gap: 40px;
+        align-items: end;
+        max-width: 800px;
+    }
+
+    &__item {
+        list-style: none;
+    }
+
+    &__item-title {
+        max-width: 205px;
+        width: 100%;
+        margin-bottom: 15px;
+        font-size: 20px;
+        font-weight: 600;
+    }
+
+    &__text {
+        position: relative;
+        list-style: none;
+
+        &::before {
+            position: absolute;
+            left: -16px;
+            top: 10px;
+            content: '';
+            width: 3px;
+            height: 3px;
+            background-color: $text;
+        }
+    }
+}
+

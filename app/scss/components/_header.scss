@@ -1,0 +1,127 @@
+.header {
+    max-width: 395px;
+    width: 100%;
+    min-height: 100%;
+    padding: 45px 0;
+    background-color: #fff;
+
+    &__inner {
+        position: fixed;
+        left: 0;
+        max-width: 395px;
+        width: 100%;
+    }
+
+    &__box {
+        display: flex;
+        align-items: center;
+        margin-bottom: 85px;
+        padding: 0 40px;
+    }
+
+    &__logo {
+        position: relative;
+        margin-right: 5px;
+        border-right: 1px solid #E5E5E5;
+        max-height: 42px;
+    }
+
+    &__img {
+        object-fit: contain;
+        width: 79px;
+        height: 53px;
+    }
+
+    &__text {
+        max-width: 160px;
+        font-weight: 600;
+        font-size: 14px;
+        line-height: 1.3;
+        color: #9E9E9E;
+        margin-left: 5px;
+    }
+
+    &__menu {
+        list-style: none;
+        padding: 0 40px;
+    }
+
+    &__item {
+        padding: 15px 0;
+        line-height: 1;
+        border-bottom: 1px solid #e5e5e5;
+    }
+
+    &__link {
+        font-family: 'OpenSans';
+        font-weight: 600;
+        font-size: 13px;
+        text-transform: uppercase;
+        transition: color 0.3s;
+        letter-spacing: 1px;
+
+        &:hover {
+            color: $btn;
+        }
+    }
+
+    &__lang {
+        text-align: center;
+        margin-top: 30px;
+        padding-left: 11px;
+    }
+
+    &__lang-item {
+        position: relative;
+        font-weight: 600;
+        font-size: 14px;
+        letter-spacing: 1px;
+
+        &.active {
+            color: $btn;
+        }
+    }
+
+    &__lang-item:first-child {
+        padding-right: 5px;
+
+        &::before {
+            position: absolute;
+            right: -4px;
+            bottom: -2px;
+            content: '/';
+            transform: rotate(340deg);
+            font-weight: 300;
+            font-size: 12px;
+            color: $text;
+        }
+    }
+
+    &__btn {
+        position: relative;
+        display: block;
+        width: 100%;
+        padding: 14px;
+        margin-top: 165px;
+        text-align: center;
+        color: #fff;
+        background-color: #FF0000;
+        font-family: 'OpenSans';
+        font-size: 14px;
+        font-weight: 600;
+        transition: background-color 0.3s, box-shadow 0.3s;
+
+        &::before {
+            content: url('../images/phone.png');
+            width: fit-content;
+        }
+
+        &:hover {
+            background-color: #db131a;
+        }
+
+        &:active {
+            box-shadow: 0 0 0 3px #f26a6f;
+        }
+    }
+}
