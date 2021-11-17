@@ -2,9 +2,17 @@
     background-color: $grey-bg;
     padding: 80px 0 115px;
 
+    @media (max-width:576px) {
+        padding: 50px 0 60px;
+    }
+
     &__inner {
         display: grid;
         grid-template-columns: minmax(200px, 340px) 1fr;
+
+        @media(max-width: 1200px) {
+            grid-template-columns: 1fr;
+        }
     }
 
     &__title {
@@ -12,6 +20,18 @@
         font-weight: 700;
         line-height: 1.4;
         text-align: right;
+
+        @media(max-width: 1200px) {
+            text-align: left;
+            margin-bottom: 25px;
+        }
+
+        @media (max-width:576px) {
+            font-size: 20px;
+            text-align: center;
+            padding: 0;
+        }
+
     }
 
     &__list {
@@ -19,6 +39,15 @@
         grid-template-columns: repeat(2, 1fr);
         gap: 24px;
         margin-left: 140px;
+
+        @media(max-width: 1200px) {
+            margin-left: 0;
+            gap: 12px;
+        }
+
+        @media(max-width: 768px) {
+            grid-template-columns: 1fr;
+        }
     }
 
     &__item {
@@ -40,12 +69,29 @@
         &--light-green {
             background-color: #E5EFD3;
         }
+
+        @media (max-width:576px) {
+            height: 160px;
+            padding: 40px 15px 30px;
+        }
     }
 
     &__item-title {
         font-size: 20px;
         font-weight: 700;
         max-width: 200px;
+
+        @media(max-width: 768px) {
+            max-width: fit-content;
+            position: absolute;
+            z-index: 1;
+            margin-right: 30px;
+        }
+
+        @media (max-width:380px) {
+            font-size: 18px;
+            max-width: 200px;
+        }
     }
 
     &__img {
@@ -53,27 +99,45 @@
         position: absolute;
         right: 0;
         bottom: 0;
+        z-index: 0;
         width: 100%;
         height: 100%;
         background-repeat: no-repeat;
         background-size: contain;
         background-position: center;
 
+        @media(max-width: 576px) {}
+
         &--sofa {
             max-width: 170px;
             max-height: 110px;
             bottom: 20px;
+
+            @media(max-width: 576px) {
+                max-height: 95px;
+                right: -70px;
+            }
         }
 
         &--bucket {
             max-width: 145px;
             max-height: 180px;
             right: 20px;
+
+            @media(max-width: 576px) {
+                max-height: 115px;
+                right: -30px;
+            }
         }
 
         &--towel {
             max-width: 200px;
             max-height: 160px;
+
+            @media(max-width: 576px) {
+                max-height: 112px;
+                right: -30px;
+            }
         }
     }
 }

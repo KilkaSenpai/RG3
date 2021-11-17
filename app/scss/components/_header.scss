@@ -1,15 +1,13 @@
 .header {
-    max-width: 395px;
-    width: 100%;
-    min-height: 100%;
+    position: relative;
     padding: 45px 0;
     background-color: #fff;
 
     &__inner {
         position: fixed;
         left: 0;
-        max-width: 395px;
-        width: 100%;
+        width: 21%;
+        min-height: 100%;
     }
 
     &__box {
@@ -122,6 +120,94 @@
 
         &:active {
             box-shadow: 0 0 0 3px #f26a6f;
+        }
+    }
+
+    &__line {
+        display: block;
+        max-width: 20px;
+        height: 3px;
+        background-color: $text;
+        margin: 0 auto;
+        margin-bottom: 5px;
+        transition: all 0.2s;
+
+        &:last-child {
+            margin: 0 auto;
+        }
+    }
+
+
+
+    &__burger {
+        display: none;
+        position: absolute;
+        top: 1px;
+        right: 15px;
+        z-index: 1;
+        max-width: 40px;
+        width: 100%;
+        cursor: pointer;
+        margin-top: 10px;
+        padding: 9px;
+        border: transparent;
+        background-color: transparent;
+
+        &:active {
+            box-shadow: 0px 0px 5px $btn;
+        }
+
+        &--close {
+            height: 44px;
+
+            .header__line--one {
+                margin-bottom: -3px;
+                transform: rotate(45deg);
+            }
+
+            .header__line--two {
+                display: none;
+            }
+
+            .header__line--three {
+                transform: rotate(-45deg);
+            }
+        }
+    }
+}
+
+@media (max-width:1500px) {
+    .header {
+        padding: 10px 0;
+
+        &__inner {
+            position: relative;
+            width: fit-content;
+            height: fit-content;
+            margin-right: 20px;
+
+            .js-open {
+                transform: translateX(0);
+                z-index: 1000;
+                background-color: #fff;
+            }
+        }
+
+        &__box {
+            margin: 0;
+        }
+
+        &__burger {
+            display: block;
+        }
+
+        &__nav-wrap {
+            position: absolute;
+            transform: translateX(-100%);
+            min-height: 100vh;
+            min-width: 300px;
+            margin-top: 8px;
+            transition: transform 0.3s;
         }
     }
 }

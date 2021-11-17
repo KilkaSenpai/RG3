@@ -1,6 +1,26 @@
 .tariffs {
     padding: 40px 0;
 
+    @media (max-width:768px) {
+        display: none;
+    }
+
+    &--mobile {
+        display: none;
+
+        @media (max-width:768px) {
+            display: block;
+
+            .tariffs__list {
+                display: flex;
+            }
+
+            .swiper-slide {
+                max-height: 300px;
+            }
+        }
+    }
+
     &__title {
         text-align: center;
         font-weight: 700;
@@ -12,8 +32,14 @@
     &__list {
         display: grid;
         grid-template-columns: repeat(4, 1fr);
-        column-gap:25px;
+        column-gap: 25px;
         list-style: none;
+
+        @media (max-width:1200px) {
+            grid-template-columns: repeat(2, 300px);
+            gap: 25px;
+            justify-content: center;
+        }
     }
 
     &__item {

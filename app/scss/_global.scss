@@ -57,5 +57,11 @@ p {
 
 .wrap {
   display: grid;
-  grid-template-columns: 395px 1fr;
+  grid-template-columns: minmax(195px, 21%) 1fr;
+}
+
+@media (max-width:1500px) {
+  .wrap {
+    grid-template-columns: 1fr;
+  }
 }
